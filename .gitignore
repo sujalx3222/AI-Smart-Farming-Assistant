@@ -1,0 +1,7 @@
+*.hdf5
+*.h5
+*.pkl
+*.bin
+__pycache__/
+venv/
+.env

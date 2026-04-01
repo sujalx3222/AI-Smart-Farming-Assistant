@@ -1,0 +1,125 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 248, 220, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 2px solid rgba(92, 64, 51, 0.1);
+  box-shadow: 0 2px 12px rgba(101, 67, 33, 0.08);
+}
+
+.navbar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--soil-brown);
+}
+.navbar-logo svg { color: var(--olive-green); }
+
+.navbar-links {
+  display: flex;
+  gap: 2px;
+}
+
+.nav-link {
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  transition: var(--transition);
+  font-family: 'Roboto', sans-serif;
+}
+.nav-link:hover {
+  color: var(--soil-brown);
+  background: rgba(107, 142, 35, 0.08);
+}
+.nav-link.active {
+  color: var(--olive-green);
+  background: rgba(107, 142, 35, 0.12);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--soil-brown);
+  cursor: pointer;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.logout-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border-input);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.logout-btn:hover {
+  color: var(--red-500);
+  background: rgba(192, 57, 43, 0.06);
+  border-color: rgba(192, 57, 43, 0.3);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 248, 220, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 2px solid var(--border-card);
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: 0 8px 24px rgba(101, 67, 33, 0.1);
+  }
+  .navbar-links.open { display: flex; }
+}
